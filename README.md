@@ -12,7 +12,7 @@ com operações básicas de criar, ler, atualizar e excluir (CRUD).
 
 Toda alteração nos dados de produtos e categorias envia uma notificação para o AWS SQS. Um consumer escuta essas notificações, gera um JSON atualizado do catálogo e salva no AWS S3.
 
-Quado a rota para obter o catalog for chamada o arquivo JSON é retornado evitando consultas excessivas no banco de dados.
+Quando a rota para obter o catálogo for chamada o arquivo JSON é retornado evitando consultas excessivas no banco de dados.
 
 ### Diagrama de comunicação:
 
@@ -73,7 +73,7 @@ A API estará disponível em http://localhost:8080
 <br>
 
 ## 📌 Documentação da API
-Após subir os containers acesse o endpoint abaixo para visualizar a documentação da api.
+Após subir os containers, acesse o endpoint abaixo para visualizar a documentação da API.
 
 ```
 GET /swagger-ui/index.html
