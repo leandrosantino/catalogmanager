@@ -1,8 +1,7 @@
 
-<div style="padding: 8px; display: flex; align-items: center;">
-  <h1>💻 Desafio Backend - Anota.ai
-    <img src="https://skillicons.dev/icons?i=java,spring,mongo,rabbitmq,docker">
-  </h1>
+<div align="center">
+  <h1>CatalogManager - Desafio Backend Anota.ai</h1>
+  <img src="https://skillicons.dev/icons?i=java,spring,mongo,rabbitmq,docker">
 </div>
 <br>
 
