@@ -52,8 +52,8 @@ O desafio original pode ser encontrado no repositório oficial da Anota.ai:
 ### 1️⃣ Clonar o repositório
 
 ```sh
-git clone https://github.com/seuusuario/desafio-backend-anota-ai.git
-cd desafio-backend-anota-ai
+git clone https://github.com/leandrosantino/catalogmanager.git
+cd catalogmanager
 ```
 
 ### 2️⃣ Configurar o ambiente
