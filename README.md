@@ -1,5 +1,10 @@
-# 💻 **Desafio Backend - Anota.ai**
 
+<div style="padding: 8px; display: flex; align-items: center;">
+  <h1>💻 Desafio Backend - Anota.ai
+    <img src="https://skillicons.dev/icons?i=java,spring,mongo,rabbitmq,docker">
+  </h1>
+</div>
+<br>
 
 Este projeto é uma API desenvolvida em **Java** e **Spring Boot** como solução para o **Desafio Backend da Anota.ai**. O desafio propõe o seguinte:
 
