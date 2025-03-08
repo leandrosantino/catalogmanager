@@ -1,0 +1,16 @@
+{
+  "owner" : "789",
+  "catalog" : [ {
+    "category_title" : "Bebidas",
+    "category_description" : "",
+    "items" : [ {
+      "title" : "Pepsi lata 250ml",
+      "description" : "",
+      "price" : 5.50
+    }, {
+      "title" : "Cocacola lata 250ml",
+      "description" : "",
+      "price" : 5.50
+    } ]
+  } ]
+}

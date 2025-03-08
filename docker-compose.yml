@@ -1,0 +1,51 @@
+
+services:
+
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3.12-management # Versão com interface de gerenciamento
+    networks:
+      - net
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin
+
+  mongodb:
+    container_name: mongodb
+    image: mongo:7.0
+    networks:
+      - net
+    healthcheck:
+      test:
+        echo '
+        rs.initiate({_id:"rs0", members:[{_id:0, host:"mongodb:27017"}]});
+        while(true){
+          try {
+            rs.status();
+            db = db.getSiblingDB("catalogmanager");
+            db.createCollection("product");
+            db.createCollection("category");
+            break;
+          } catch (err) { continue;}
+        }
+        ' | mongosh --port 27017 --quiet
+      interval: 5s
+    command: [ "mongod", "--noauth", "--replSet", "rs0", "--bind_ip_all" ]
+
+  app:
+    container_name: app
+    build: .
+    depends_on:
+      mongodb:
+          condition: service_healthy
+    ports:
+      - "8080:8080"
+    networks:
+      - net
+    volumes:
+      - ./generated:/usr/src/app/generated
+
+networks:
+  net:
+    driver: bridge
+
