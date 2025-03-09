@@ -76,7 +76,7 @@ A API estará disponível em http://localhost:8080
 Após subir os containers, acesse o endpoint abaixo para visualizar a documentação da API.
 
 ```
-GET /swagger-ui/index.html
+GET http://localhost:8080/swagger-ui/index.html#/
 ```
 
 <br>
