@@ -6,6 +6,7 @@ import com.anota.ai.catalogmanager.category.usecase.CreateCategory;
 import com.anota.ai.catalogmanager.category.usecase.DeleteCategory;
 import com.anota.ai.catalogmanager.category.usecase.ListAllCategories;
 import com.anota.ai.catalogmanager.category.usecase.UpdateCategory;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/category")
+@Tag(name = "Category")
 public class CategoryController {
 
     @Autowired CreateCategory createCategoryUseCase;

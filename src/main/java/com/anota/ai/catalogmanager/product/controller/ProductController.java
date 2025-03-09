@@ -5,6 +5,7 @@ import com.anota.ai.catalogmanager.product.ProductModel;
 import com.anota.ai.catalogmanager.product.dto.ProductDTO;
 import com.anota.ai.catalogmanager.product.dto.UpdateProductCategoryRequestDTO;
 import com.anota.ai.catalogmanager.product.usecase.*;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/product")
+@Tag(name = "Product")
 public class ProductController {
 
     @Autowired CreateProduct createProductUseCase;
